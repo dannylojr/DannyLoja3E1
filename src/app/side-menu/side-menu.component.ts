@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class SideMenuComponent {
   userName: string = "Danny Loja";
   theme: string = "";
-  widthMenu: number = 50;
+  widthMenu: number = 25;
   visibleMenu: boolean = true;
 
   setVisibilityBack():void {
@@ -32,7 +32,7 @@ export class SideMenuComponent {
   setSizeMenu(){
     this.widthMenu+=10;
     if(this.widthMenu>100){
-      this.widthMenu = 50;
+      this.widthMenu = 25;
     }
   }
 }

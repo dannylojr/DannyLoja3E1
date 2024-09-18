@@ -1,50 +1,55 @@
-.container{
+.contenedor {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: stretch;
 }
-.sidemenu-container{
-    width: 20%;
+
+.sidemenu-container {
     height: 100vh;
-    background-color: #0D1B2A; /* Un azul oscuro espacial */
+    background-color: #0D1B2A;
+    /* Un azul oscuro espacial */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    border-right: 2px solid #FF4C29; /* Detalle neón */
+    border-right: 2px solid #FF4C29;
+    /* Detalle neón */
     box-shadow: 0 0 15px rgba(255, 76, 41, 0.5);
     transition: width 0.3s ease, background-color 0.3s ease;
-    font-family: 'Montserrat', sans-serif; /* Tipografía moderna */
+    font-family: 'Montserrat', sans-serif;
+    /* Tipografía moderna */
     border-radius: 1rem;
-    padding-right: 1rem;
 }
 
 
-.item{
+.item {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 1rem;
+    margin-right: 1rem;
     gap: 20px;
     width: auto;
-    padding: 20px;
     border-radius: 10px;
-    background-color: rgba(13, 27, 42, 0.7); /* Fondo semitransparente */
+    background-color: rgba(13, 27, 42, 0.7);
+    /* Fondo semitransparente */
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
 
-.item:hover{
-    background-color: rgba(255, 76, 41, 0.2); /* Efecto hover */
+.item:hover {
+    background-color: rgba(255, 76, 41, 0.2);
+    /* Efecto hover */
     box-shadow: 0 0 10px rgba(255, 76, 41, 0.5);
 }
 
-.item3 img{
+.item3 img {
     width: 50px;
     border-radius: 50%;
-    border: 2px solid #FF4C29; /* Bordes con brillo */
+    border: 2px solid #FF4C29;
+    /* Bordes con brillo */
     transition: transform 0.3s ease;
 }
 
@@ -67,12 +72,13 @@
     margin: 0;
 }
 
-.item span{
+.item span {
     font-size: 1.5rem;
-    color: #FF4C29; /* Íconos en color neón */
+    color: #FF4C29;
+    /* Íconos en color neón */
 }
 
-.btn{
+.btn {
     background-color: #FF4C29;
     color: white;
     border: none;
@@ -84,13 +90,14 @@
     font-size: 16px;
 }
 
-.btn:hover{
-    background-color: #E0E1DD; /* Inversión de colores en hover */
+.btn:hover {
+    background-color: #E0E1DD;
+    /* Inversión de colores en hover */
     color: #0D1B2A;
     box-shadow: 0 0 10px rgba(255, 76, 41, 0.5);
 }
 
-.item3{
+.item3 {
     font-size: 18px;
     font-weight: bold;
     color: #E0E1DD;
@@ -120,7 +127,8 @@
 }
 
 .back-btn svg {
-    width: 24px; /* Tamaño de la flecha */
+    width: 24px;
+    /* Tamaño de la flecha */
     height: 24px;
 }
 
@@ -140,133 +148,158 @@
     from {
         transform: translateX(-100%);
     }
+
     to {
         transform: translateX(0);
     }
 }
 
 /* Estilo del contenedor de 'Ejercicio2' con temática de Saturno */
-.ejercicio-container {
-    width: 80%; /* Ocupa el 80% del ancho de la pantalla */
+.texto {
+    width: 100%;
+    /* Ocupa el 80% del ancho de la pantalla */
     height: auto;
-    background: radial-gradient(circle at top, #0b3d91, #000); /* Simula un fondo estrellado/espacial */
-    color: #E0E1DD; /* Texto en blanco suave */
-    border: 2px solid #FFC857; /* Bordes dorados que representan los anillos de Saturno */
+    background: radial-gradient(circle at top, #0b3d91, #000);
+    /* Simula un fondo estrellado/espacial */
+    color: #E0E1DD;
+    /* Texto en blanco suave */
+    border: 2px solid #FFC857;
+    /* Bordes dorados que representan los anillos de Saturno */
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(255, 200, 87, 0.5), inset 0 0 30px rgba(255, 200, 87, 0.3); /* Brillo */
-    position: relative; /* Necesario para los pseudo-elementos */
-    text-align: center; /* Centrar el texto */
+    box-shadow: 0 0 20px rgba(255, 200, 87, 0.5), inset 0 0 30px rgba(255, 200, 87, 0.3);
+    /* Brillo */
+    position: relative;
+    /* Necesario para los pseudo-elementos */
+    text-align: center;
+    /* Centrar el texto */
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    display: flex; /* Asegura el centrado */
+    display: flex;
+    /* Asegura el centrado */
     align-items: center;
     justify-content: center;
-    min-height: 200px; /* Asegura una altura mínima */
+    min-height: 200px;
+    /* Asegura una altura mínima */
 }
 
 
-/* Pseudo-elemento para simular anillos de Saturno */
-.ejercicio-container::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -30px;
-    width: 120%;
-    height: 10px;
-    background: linear-gradient(90deg, rgba(255, 200, 87, 0.7), rgba(255, 200, 87, 0), rgba(255, 200, 87, 0.7));
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(255, 200, 87, 0.5); /* Simula el brillo de los anillos */
-    animation: rotateRing 8s infinite linear; /* Rotación suave de los anillos */
-    transform-origin: center center;
-}
+
 
 /* Animación de los anillos */
 @keyframes rotateRing {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
-.collapsed-bar {
+
+.barra {
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 60px;
-    background: linear-gradient(135deg, #00F5D4, #001233); /* Colores neón y oscuros */
+    background: linear-gradient(135deg, #00F5D4, #001233);
+    /* Colores neón y oscuros */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     transition: all 0.5s ease;
-    opacity: 0; /* Oculto inicialmente */
+    opacity: 0;
+    /* Oculto inicialmente */
     pointer-events: none;
-    box-shadow: 2px 0 15px rgba(0, 245, 212, 0.7); /* Sombra neón */
-    border-right: 2px solid #00F5D4; /* Borde de color neón */
+    box-shadow: 2px 0 15px rgba(0, 245, 212, 0.7);
+    /* Sombra neón */
+    border-right: 2px solid #00F5D4;
+    /* Borde de color neón */
     padding-top: 20px;
-    z-index: 10; /* Asegura que esté sobre otros elementos */
+    z-index: 10;
+    /* Asegura que esté sobre otros elementos */
 }
 
-.collapsed-bar.show {
-    opacity: 1; /* Mostrarse cuando esté visible */
-    pointer-events: all; /* Permitimos clics cuando se muestra */
+.barra.show {
+    opacity: 1;
+    /* Mostrarse cuando esté visible */
+    pointer-events: all;
+    /* Permitimos clics cuando se muestra */
 }
 
-.collapsed-bar .menu-item {
-    width: 40px; /* Reducimos el ancho de los ítems */
+.barra .menu-item {
+    width: 40px;
+    /* Reducimos el ancho de los ítems */
     height: 40px;
-    margin-bottom: 20px; /* Espaciado entre los ítems */
-    background-color: #FF4C29; /* Color rojo vibrante para los ítems */
+    margin-bottom: 20px;
+    /* Espaciado entre los ítems */
+    background-color: #FF4C29;
+    /* Color rojo vibrante para los ítems */
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(255, 76, 41, 0.5); /* Efecto de brillo neón */
+    box-shadow: 0 0 15px rgba(255, 76, 41, 0.5);
+    /* Efecto de brillo neón */
 }
 
-.collapsed-bar .menu-item:hover {
-    background-color: #00F5D4; /* Cambio de color al hover con un tono neón */
-    transform: scale(1.1); /* Ligeramente más grande al pasar el mouse */
+.barra .menu-item:hover {
+    background-color: #00F5D4;
+    /* Cambio de color al hover con un tono neón */
+    transform: scale(1.1);
+    /* Ligeramente más grande al pasar el mouse */
 }
 
-.collapsed-bar .menu-item svg {
-    fill: #fff; /* Color de los íconos */
+.barra .menu-item svg {
+    fill: #fff;
+    /* Color de los íconos */
     width: 24px;
     height: 24px;
 }
 
-.show-menu {
+.menu {
     border: 3px solid transparent;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 15px;
-    border: 3px solid #00F5D4; /* Borde neón brillante */
+    border: 3px solid #00F5D4;
+    /* Borde neón brillante */
     border-radius: 5px;
-    background-color: #001233; /* Fondo oscuro */
-    color: #00F5D4; /* Texto con un toque futurista neón */
+    background-color: #001233;
+    /* Fondo oscuro */
+    color: #00F5D4;
+    /* Texto con un toque futurista neón */
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0px 4px 15px rgba(0, 245, 212, 0.7); /* Sombra neón */
+    box-shadow: 0px 4px 15px rgba(0, 245, 212, 0.7);
+    /* Sombra neón */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase; /* Letras en mayúsculas para más impacto */
-    font-family: 'Orbitron', sans-serif; /* Tipografía futurista */
+    text-transform: uppercase;
+    /* Letras en mayúsculas para más impacto */
+    font-family: 'Orbitron', sans-serif;
+    /* Tipografía futurista */
 }
 
-.show-menu:hover {
-    background-color: #00F5D4; /* Inversión de colores en hover */
-    color: #001233; /* Texto oscuro en hover */
-    transform: scale(1.05); /* Ligeramente más grande en hover */
-    box-shadow: 0px 6px 20px rgba(0, 245, 212, 1); /* Sombra neón más intensa */
+.menu:hover {
+    background-color: #00F5D4;
+    /* Inversión de colores en hover */
+    color: #001233;
+    /* Texto oscuro en hover */
+    transform: scale(1.05);
+    /* Ligeramente más grande en hover */
+    box-shadow: 0px 6px 20px rgba(0, 245, 212, 1);
+    /* Sombra neón más intensa */
 }
 
-.show-menu:active {
-    transform: scale(0.95); /* Efecto de clic */
-    box-shadow: 0px 3px 8px rgba(0, 245, 212, 0.8); /* Sombra reducida al hacer clic */
+.menu:active {
+    transform: scale(0.95);
+    /* Efecto de clic */
+    box-shadow: 0px 3px 8px rgba(0, 245, 212, 0.8);
+    /* Sombra reducida al hacer clic */
 }
