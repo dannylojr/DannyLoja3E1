@@ -1,0 +1,38 @@
+<div class="body">
+   <div class="collapsed-bar"
+   [style.opacity]="visibleMenu ? '0' : '1'"
+   [style.pointerEvents]="visibleMenu ? 'none' : 'all'">
+   <button (click)="setVisibilityMenu()" class="show-menu">Menu</button></div>
+   <div class="container">
+      <div class="sidemenu-container" [style.backgroundColor]="theme" [style.width]="widthMenu + '%'"
+         [style.display]="visibleMenu ? 'flex' : 'none'">
+
+         <div class="item3">
+            <img src="https://i.scdn.co/image/ab67616d00001e0277ca8a929a08890cb6c8691c" alt="Perfil.png">
+            <p>{{userName}}</p>
+            <button class="btn back-btn" (click)="setVisibilityBack()">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+               </svg></button>
+         </div>
+
+         <div class="item">
+            <p><span>📅</span>Dashboard</p>
+         </div>
+
+         <div class="item">
+            <p><span>😁</span>Profile</p>
+         </div>
+
+         <div class="item">
+            <button class="btn" (click)="setThemeColor('red')">Change Color</button>
+            <button class="btn" (click)="setSizeMenu()">Change Size</button>
+         </div>
+
+      </div>
+      <div class="ejercicio-container">
+         Ejercicio2
+      </div>
+   </div>
